@@ -45,6 +45,11 @@
     <filter-class>org.grails.plugin.resource.DevModeSanityFilter</filter-class>
     <async-supported>true</async-supported>
   </filter>
+  <filter>
+    <filter-name>AssetPipelineFilter</filter-name>
+    <filter-class>asset.pipeline.AssetPipelineFilter</filter-class>
+    <async-supported>true</async-supported>
+  </filter>
 
     <filter>
         <filter-name>charEncodingFilter</filter-name>
@@ -111,9 +116,22 @@
     <url-pattern>/plugins/*</url-pattern>
   </filter-mapping>
   <filter-mapping>
+    <filter-name>AdHocResourcesPluginFilter</filter-name>
+    <url-pattern>/bower_components/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>AdHocResourcesPluginFilter</filter-name>
+    <url-pattern>/views/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
     <filter-name>hiddenHttpMethod</filter-name>
     <url-pattern>/*</url-pattern>
     <dispatcher>FORWARD</dispatcher>
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>AssetPipelineFilter</filter-name>
+    <url-pattern>/assets/*</url-pattern>
     <dispatcher>REQUEST</dispatcher>
   </filter-mapping>
   <filter-mapping>
