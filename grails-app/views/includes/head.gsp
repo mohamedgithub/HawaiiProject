@@ -6,7 +6,7 @@
     <!-- Logo -->
     <div class="logo">
         <a href="#/">
-            <span>{{main.brand}}</span>
+            <span><span data-i18n="main_title"></span></span>
         </a>
     </div>
 
@@ -193,30 +193,28 @@
                     <li>
                         <a href="#/pages/profile">
                             <i class="fa fa-user"></i>
-                            <span data-i18n="My Profile"></span>
+                            <span data-i18n="my_profile"></span>
                         </a>
                     </li>
                     <li>
                         <a href="#/tasks">
                             <i class="fa fa-check"></i>
-                            <span data-i18n="My Tasks"></span>
+                            <span data-i18n="my_tasks"></span>
                         </a>
                     </li>
                     <li>
                         <a href="#/pages/lock-screen">
                             <i class="fa fa-lock"></i>
-                            <span data-i18n="Lock"></span>
+                            <span data-i18n="lock_screen"></span>
                         </a>
                     </li>
                     <li>
-                        <g:link class="logout" controller="logout"> <i class="fa fa-sign-out"></i>Log Out</g:link>
-                        </li>
-                    </ul>
-                </li>
-
+                        <g:link class="logout" controller="logout"> <i class="fa fa-sign-out"></i><span data-i18n="log_out"></span></g:link>
+                    </li>
+                </ul>
+            </li>
         </ul>        
     </div>
-
 </header>
 
 

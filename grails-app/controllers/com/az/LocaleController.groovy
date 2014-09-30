@@ -14,7 +14,6 @@ class LocaleController {
     
     def resource() {
         
-        Console.print(params.locale)
         def langSuffix = "_${params.locale}"
         def props = new java.util.Properties()
         props.load( new FileInputStream( "grails-app/i18n/messages${langSuffix}.properties" ))
