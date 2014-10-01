@@ -1,6 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 
-<header class="clearfix">
+<header class="clearfix" data-ng-controller="LangCtrl">
+    <div data-ng-if="language == '_ar'">
+        <asset:stylesheet src="main_ar.css"/>
+    </div>
+    <div data-ng-if="language != '_ar'">
+        <asset:stylesheet src="main.css"/>
+    </div>
     <a href="#/" data-toggle-min-nav class="toggle-min"><i class="fa fa-bars"></i></a>
 
     <!-- Logo -->
@@ -158,7 +164,7 @@
         </ul>
 
         <ul class="nav-right pull-right list-unstyled">
-            <li class="dropdown langs text-normal" data-ng-controller="LangCtrl">
+            <li class="dropdown langs text-normal" >
                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                     {{lang}}
                 </a>

@@ -20,7 +20,7 @@
                 </span>
                 <div class="box-info">
                     <p class="size-h2">112</p>
-                    <p class="text-muted"><span data-i18n="New users"></span></p>
+                    <p class="text-muted"><span data-i18n="new_users"></span></p>
                 </div>
             </div>
         </div>
@@ -55,15 +55,8 @@
             <section class="panel panel-default">
                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span data-i18n="Data"></span></strong></div>
                 <div class="panel-body" data-ng-controller="morrisChartCtrl">
-                    <div morris-chart
-                         data-data="comboData"
-                         data-type="bar"
-                         data-xkey="year"
-                         data-ykeys='["a", "b", "c"]'
-                         data-labels='["Value A", "Value B", "Value C"]'
-                         data-bar-colors='["#176799","#42A4BB","#78D6C7"]'
-                         style="height: 300px;"
-                         ></div>
+                    <div morris-chart data-data="comboData"data-type="bar"data-xkey="year" data-ykeys='["a", "b", "c"]' data-labels='["Value A", "Value B", "Value C"]' data-bar-colors='["#176799","#42A4BB","#78D6C7"]'
+                         style="height: 300px;"></div>
                 </div>
             </section> 
         </div>

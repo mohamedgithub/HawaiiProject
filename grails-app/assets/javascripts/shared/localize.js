@@ -20,6 +20,9 @@
           localize.url = value;
           return localize.initLocalizedResources();
         },
+        getLanguage: function() {
+          return localize.language;
+        },
         buildUrl: function() {
           if (!localize.language) {
             localize.language = ($window.navigator.userLanguage || $window.navigator.language).toLowerCase();
@@ -86,6 +89,7 @@
   ]).controller('LangCtrl', [
     '$scope', 'localize', function($scope, localize) {
       $scope.lang = 'English';
+      $scope.language = '';
       return $scope.setLang = function(lang) {
         switch (lang) {
           case 'English':
@@ -98,11 +102,17 @@
             localize.setLanguage('AR-AE');
             break;
         }
-        
+        $scope.language = localize.getLanguage();
+         if($scope.language !=='ar') {
+             $scope.language='';
+         } else {
+             $scope.language= '_' + $scope.language;
+             
+         }
         return $scope.lang = lang;
       };
     }
-  ]);
+    ]);
 
 }).call(this);
 

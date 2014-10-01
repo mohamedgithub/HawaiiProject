@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="${resource(dir: 'bower_components/font-awesome/css/', file: 'font-awesome.min.css')}" />
         <link rel="stylesheet" href="${resource(dir: 'bower_components/weather-icons/css/', file: 'weather-icons.min.css')}" />
 
-        <asset:stylesheet src="main.css"/>
+        <!--<asset:stylesheet src="main.css"/>-->
         <link rel="stylesheet" href="${resource(dir: 'bower_components/morris.js/', file: 'morris.css')}" type="text/css">
     </head>
     <body id="app" data-ng-app="app" data-custom-background data-off-canvas-nav="">
