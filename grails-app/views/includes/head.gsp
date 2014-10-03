@@ -8,7 +8,7 @@
         <asset:stylesheet src="main.css"/>
     </div>
     <a href="#/" data-toggle-min-nav class="toggle-min"><i class="fa fa-bars"></i></a>
-
+    
     <!-- Logo -->
     <div class="logo">
         <a href="#/">

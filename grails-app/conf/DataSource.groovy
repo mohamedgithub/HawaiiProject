@@ -17,7 +17,7 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = ""
+            dbCreate = "update"
             driverClassName = "com.mysql.jdbc.Driver"
             url = "jdbc:mysql://localhost/Hawaii"
             username = "root"

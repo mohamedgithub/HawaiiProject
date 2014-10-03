@@ -74,5 +74,6 @@
         <asset:javascript src="Form/FormValidation.js"/>
         <asset:javascript src="Table/TableCtrl.js"/>
         <asset:javascript src="Task/Task.js"/>
+        <asset:javascript src="Task/Config.js"/>
     </body>
 </html>

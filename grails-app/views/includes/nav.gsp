@@ -68,6 +68,12 @@
                 <!-- <li><a href="#/pages/invoice"><i class="fa fa-caret-right"></i><span data-i18n="Invoice"></span></a></li> -->
             </ul>
         </li>
+         <li>
+            <a href="#/includes"><i class="fa fa-file-text-o"><span class="icon-bg bg-violet"></span></i><span data-i18n="Configuration"></span></a>
+            <ul>
+                <li><a href="#/app/config"><i class="fa fa-caret-right"></i><span data-i18n="congiuration"></span></a></li>
+            </ul>
+        </li>
     </ul>
 </div>
 

@@ -103,13 +103,13 @@
             break;
         }
         $scope.language = localize.getLanguage();
-         if($scope.language !=='ar') {
-             $scope.language='';
-         } else {
-             $scope.language= '_' + $scope.language;
+            if($scope.language !=='ar') {
+                $scope.language='';
+            } else {
+                $scope.language= '_' + $scope.language;
              
-         }
-        return $scope.lang = lang;
+            }
+            return $scope.lang = lang;
       };
     }
     ]);
