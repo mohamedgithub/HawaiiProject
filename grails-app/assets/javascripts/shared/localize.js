@@ -105,9 +105,10 @@
         $scope.language = localize.getLanguage();
          if($scope.language !=='ar') {
              $scope.language='';
+             jQuery('.fa-caret-left').removeClass('fa-caret-left').addClass('fa-caret-right');  
          } else {
              $scope.language= '_' + $scope.language;
-             
+             jQuery('.fa-caret-right').removeClass('fa-caret-right').addClass('fa-caret-left');             
          }
         return $scope.lang = lang;
       };

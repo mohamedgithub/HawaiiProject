@@ -10,10 +10,10 @@
     <a href="#/" data-toggle-min-nav class="toggle-min"><i class="fa fa-bars"></i></a>
 
     <!-- Logo -->
-    <div class="logo">
+   <div class="logo">
         <a href="#/">
             <span><span data-i18n="main_title"></span></span>
-        </a>
+       </a>
     </div>
 
     <!-- needs to be put after logo to make it working-->
@@ -169,9 +169,9 @@
                     {{lang}}
                 </a>
                 <ul class="dropdown-menu with-arrow pull-right list-langs" role="menu">
-                    <li><a href="javascript:;" data-ng-click="setLang('English')"> <div class="flag flags-american"></div> English</a></li>
-                    <li><a href="javascript:;" data-ng-click="setLang('Spanish')"> <div class="flag flags-spain"></div> Spanish</a></li>
-                    <li><a href="javascript:;" data-ng-click="setLang('Arab')"> <div class="flag flags-american"></div> Arab</a></li>
+                    <li><a href="javascript:;" data-ng-click="setLang('English')"> <div class="flag flags-american"></div><span data-i18n="english"></span></a></li>
+                    <li><a href="javascript:;" data-ng-click="setLang('Spanish')"> <div class="flag flags-spain"></div><span data-i18n="spanish"></span></a></li>
+                    <li><a href="javascript:;" data-ng-click="setLang('Arab')"> <div class="flag flags-american"></div><span data-i18n="arab"></span></a></li>
 <!--                    <li data-ng-show="lang !== 'English' ">
                         <a href="javascript:;" data-ng-click="setLang('English')"><div class="flag flags-american"></div> English</a></li>
                     <li data-ng-show="lang !== 'Español' ">
@@ -192,7 +192,7 @@
                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                     <img src="images/g1.jpg" alt="" class="img-circle img30_30">
                     <span class="hidden-xs">
-                        <span data-i18n="Lisa Doe"></span>
+                        <span data-i18n="lisa_doe"></span>
                     </span>
                 </a>
                 <ul class="dropdown-menu with-arrow pull-right">

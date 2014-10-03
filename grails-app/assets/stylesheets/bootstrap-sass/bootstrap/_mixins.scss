@@ -732,7 +732,7 @@
   padding-right: ($gutter / 2);
 
   @media (min-width: $screen-md-min) {
-    float: left;
+    float: right;
     width: percentage(($columns / $grid-columns));
   }
 }
@@ -761,7 +761,7 @@
   padding-right: ($gutter / 2);
 
   @media (min-width: $screen-lg-min) {
-    float: left;
+    float: right;
     width: percentage(($columns / $grid-columns));
   }
 }
