@@ -19,8 +19,4 @@ class LocaleController {
         props.load( new FileInputStream( "grails-app/i18n/messages${langSuffix}.properties" ))
         render props as JSON
     }
-    
-    def angular() {
-        render(view:"angular")
-    }
 }

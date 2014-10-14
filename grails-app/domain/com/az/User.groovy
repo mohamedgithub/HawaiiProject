@@ -6,15 +6,21 @@ class User {
 
 	String username
 	String password
+        String email
+        String location
+        String phonenumber
 	boolean enabled = true
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
-
-	static transients = ['springSecurityService']
+        
+        static transients = ['springSecurityService']
 
 	static constraints = {
-		username blank: false, unique: true
+		username blank: false
+		email blank: false, unique: true
+		location blank: false
+		phonenumber blank: false
 		password blank: false
 	}
 

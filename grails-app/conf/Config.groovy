@@ -85,6 +85,8 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
+//grails.gorm.failOnError=true
+
 
 // configure passing transaction's read-only attribute to Hibernate session, queries and criterias
 // set "singleSession = false" OSIV mode in hibernate configuration after enabling
@@ -139,8 +141,8 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/favicon.ico':                ['permitAll']
 ]
 
-grails.plugin.databasemigration.updateOnStart = true
-grails.plugin.databasemigration.updateOnStartFileNames = ["changelog.groovy"]
-grails.plugin.databasemigration.changelogLocation = 'grails-app/migrations'
+//grails.plugin.databasemigration.updateOnStart = true
+//grails.plugin.databasemigration.updateOnStartFileNames = ["changelog.groovy"]
+//grails.plugin.databasemigration.changelogLocation = 'grails-app/migrations'
 
 grails.plugin.springsecurity.logout.postOnly = false

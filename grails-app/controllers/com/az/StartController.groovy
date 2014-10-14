@@ -1,4 +1,6 @@
 package com.az
+
+import grails.converters.JSON
 import grails.plugin.springsecurity.annotation.Secured
 
 class StartController {
@@ -7,9 +9,5 @@ class StartController {
     def index() {
         render(view:'home')
     }
-    
-    @Secured(['ROLE_ADMIN'])
-    def house() {
-        render(view:'house')
-    }
+ 
 }

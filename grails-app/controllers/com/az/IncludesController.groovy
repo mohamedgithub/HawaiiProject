@@ -28,6 +28,14 @@ class IncludesController {
         render(view:'config')
     }
     
+    def showProfile() {
+        render(view:'profile')
+    }
+    
+    def account() {
+        render(view:'createAccount')
+    }
+    
     def saveItem() {
         def object = request.JSON
         def form = new Form()
