@@ -88,6 +88,7 @@
     }
   ]).controller('LangCtrl', [
     '$scope', 'localize', function($scope, localize) {
+      localize.setLanguage('EN-US');
       $scope.lang = 'English';
       $scope.language = '';
       return $scope.setLang = function(lang) {
@@ -103,14 +104,13 @@
             break;
         }
         $scope.language = localize.getLanguage();
-         if($scope.language !=='ar') {
-             $scope.language='';
-             jQuery('.fa-caret-left').removeClass('fa-caret-left').addClass('fa-caret-right');  
-         } else {
-             $scope.language= '_' + $scope.language;
-             jQuery('.fa-caret-right').removeClass('fa-caret-right').addClass('fa-caret-left');             
-         }
-        return $scope.lang = lang;
+            if($scope.language !=='ar') {
+                $scope.language='';
+            } else {
+                $scope.language= '_' + $scope.language;
+             
+            }
+            return $scope.lang = lang;
       };
     }
     ]);

@@ -13,8 +13,7 @@
     font-weight: normal;
     line-height: 1;
     position: relative;
-    top: 1px;
-    
+    top: 1px;  
 }
 
 .panel-default > .panel-heading {
@@ -72,17 +71,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     z-index: 11;
 }
 
-/*.glyphicon {
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    position: relative;
-    top: 1px;
-    float: right;
-}*/
-
 .glyphicon {
     display: inline-block;
     float: left;
@@ -101,10 +89,60 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     top: 20px;
     float: right;
 }
-
-.customemargin {
- margin-right:15px;
+.panel {
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    margin-top: 14px;
+    padding: 17px;
+    top: 38px;
+    width: 90%;
+}
+.btn-primary {
+    background-color: #1c7ebb;
+    border-color: #196fa5;
+    color: white;
+    margin-right: 124%;
 }
 
+.page-signin .signin-body, .page-signin .signup-body, .page-signup .signin-body, .page-signup .signup-body {
+    border-top: 1px solid #f8f8f8;
+    margin-right: 246px;
+    padding: 40px 10px;
+}
 
+.customepanel {
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    margin-top: 14px;
+    padding: 17px;
+    top: 38px;
+    width: 77%;
+}
 
+.page-signin .signin-body, .page-signin .signup-body, .page-signup .signin-body, .page-signup .signup-body {
+    border-top: 1px solid #f8f8f8;
+/*    margin-right: 246px;*/
+    padding: 40px 10px;
+    width: 78%;
+}
+
+.page-signin .signin-header, .page-signup .signin-header {
+    background-color: #dfe0e6;
+    padding: 25px 0;
+    width: 80%;
+}
+.right {
+    float: right;
+}
+
+#nav-container {
+    left: 82%;
+    width: 18%;
+    top:50px;
+}

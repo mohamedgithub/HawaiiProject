@@ -1,11 +1,11 @@
 (function() {
   'use strict';
-  angular.module('app', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'easypiechart', 'mgo-angular-wizard', 'textAngular', 'app.ui.ctrls', 'app.ui.directives', 'app.ui.services', 'app.controllers', 'app.directives', 'app.form.validation', 'app.ui.form.ctrls', 'app.ui.form.directives', 'app.tables', 'app.task', 'app.localization', 'app.chart.ctrls', 'app.chart.directives']).config([
+  angular.module('app', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'easypiechart', 'mgo-angular-wizard', 'textAngular', 'app.ui.ctrls', 'app.ui.directives', 'app.ui.services', 'app.controllers', 'app.directives', 'app.form.validation', 'app.ui.form.ctrls', 'app.ui.form.directives', 'app.tables', 'app.task', 'app.localization', 'app.chart.ctrls', 'app.chart.directives','listExamples','ChangePassword']).config([
     '$routeProvider', function($routeProvider) {
       return $routeProvider.when('/', {
         redirectTo: '/dashboard'
       }).when('/dashboard', {
-        templateUrl: 'views/dashboard.html'
+        templateUrl: 'includes/dashboard'
       }).when('/ui/typography', {
         templateUrl: 'views/ui/typography.html'
       }).when('/ui/buttons', {
@@ -66,6 +66,10 @@
         templateUrl: 'views/pages/invoice.html'
       }).when('/tasks', {
         templateUrl: 'views/tasks/tasks.html'
+      }).when('/app/config', {
+        templateUrl: 'includes/config'
+      }).when('/pages/changePassword', {
+        templateUrl: 'user/changePassword'
       }).otherwise({
         redirectTo: '/404'
       });

@@ -8,7 +8,7 @@
         <asset:stylesheet src="main.css"/>
     </div>
     <a href="#/" data-toggle-min-nav class="toggle-min"><i class="fa fa-bars"></i></a>
-
+    
     <!-- Logo -->
    <div class="logo">
         <a href="#/">
@@ -200,6 +200,12 @@
                         <a href="#/pages/profile">
                             <i class="fa fa-user"></i>
                             <span data-i18n="my_profile"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/pages/changePassword">
+                            <i class="fa fa-lock"></i>
+                            <span data-i18n="change_password"></span>
                         </a>
                     </li>
                     <li>

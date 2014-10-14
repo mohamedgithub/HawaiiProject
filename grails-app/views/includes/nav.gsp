@@ -1,10 +1,18 @@
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-
-    <div id="nav-wrapper">
-    <ul id="nav" data-ng-controller="NavCtrl" data-collapse-nav data-slim-scroll data-highlight-active>
+<%@ page contentType="text/html;charset=UTF-8" %>{{language}}
+    <div id="nav-wrapper" data-ng-controller="NavCtrl">
+    <ul id="nav" data-collapse-nav data-slim-scroll data-highlight-active>
         <li><a href="#/dashboard"><i class="fa fa-dashboard"><span class="icon-bg bg-danger"></span></i><span data-i18n="Dashboard"></span> </a></li>
-        <li>
+         <li>
+            <a href="#/includes"><i class="fa fa-file-text-o"><span class="icon-bg bg-violet"></span></i><span data-i18n="configuration"></span></a>
+            <ul>
+                <li><a href="#/app/config"><i class="fa fa-caret-right"></i><span data-i18n="configuration"></span></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!--        <li>
             <a href="#/ui"><i class="fa fa-magic"><span class="icon-bg bg-orange"></span></i><span data-i18n="ui_kit"></span></a>
             <ul>
                 <li><a href="#/ui/buttons"><i class="fa fa-caret-right"></i><span data-i18n="buttons"></span></a></li>
@@ -65,9 +73,6 @@
                 <li><a href="#/pages/404"><i class="fa fa-caret-right"></i>404 <span data-i18n="error"></span></a></li>
                 <li><a href="#/pages/500"><i class="fa fa-caret-right"></i>500 <span data-i18n="error"></span></a></li>
                 <li><a href="#/pages/blank"><i class="fa fa-caret-right"></i><span data-i18n="blank_page"></span></a></li>
-                <!-- <li><a href="#/pages/invoice"><i class="fa fa-caret-right"></i><span data-i18n="Invoice"></span></a></li> -->
+                 <li><a href="#/pages/invoice"><i class="fa fa-caret-right"></i><span data-i18n="Invoice"></span></a></li> 
             </ul>
-        </li>
-    </ul>
-</div>
-
+        </li>-->

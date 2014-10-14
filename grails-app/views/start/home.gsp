@@ -27,6 +27,7 @@
        
         <script type="text/javascript" src="${resource(dir: 'bower_components/jquery/dist/', file: 'jquery.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular/', file: 'angular.min.js')}" ></script>
+        <script type="text/javascript" src="${resource(dir: 'bower_components/angular/', file: 'angular.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular-route/', file: 'angular-route.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular-animate/', file: 'angular-animate.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/underscore/', file: 'underscore-min.js')}" ></script>
@@ -74,5 +75,7 @@
         <asset:javascript src="Form/FormValidation.js"/>
         <asset:javascript src="Table/TableCtrl.js"/>
         <asset:javascript src="Task/Task.js"/>
+        <asset:javascript src="Task/changePassword.js"/>
+        <asset:javascript src="Task/Config.js"/>
     </body>
 </html>
