@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('app', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'easypiechart', 'mgo-angular-wizard', 'textAngular', 'app.ui.ctrls', 'app.ui.directives', 'app.ui.services', 'app.controllers', 'app.directives', 'app.form.validation', 'app.ui.form.ctrls', 'app.ui.form.directives', 'app.tables', 'app.task', 'app.localization', 'app.chart.ctrls', 'app.chart.directives','listExamples','ChangePassword']).config([
+  angular.module('app', ['ngRoute', 'ngAnimate','ui.bootstrap', 'easypiechart', 'mgo-angular-wizard', 'textAngular', 'app.ui.ctrls', 'app.ui.directives', 'app.ui.services', 'app.controllers', 'app.directives', 'app.form.validation', 'app.ui.form.ctrls', 'app.ui.form.directives', 'app.tables', 'app.task', 'app.localization', 'app.chart.ctrls', 'app.chart.directives','listExamples','app.account','app.lockscreen']).config([
     '$routeProvider', function($routeProvider) {
       return $routeProvider.when('/', {
         redirectTo: '/dashboard'
@@ -52,10 +52,10 @@
         templateUrl: 'views/pages/signin.html'
       }).when('/pages/signup', {
         templateUrl: 'views/pages/signup.html'
-      }).when('/pages/lock-screen', {
-        templateUrl: 'views/pages/lock-screen.html'
-      }).when('/pages/profile', {
-        templateUrl: 'views/pages/profile.html'
+      }).when('/app/lockscreen', {
+        templateUrl: 'includes/lockscreen'
+      }).when('/user/profile', {
+        templateUrl: 'includes/showProfile'
       }).when('/404', {
         templateUrl: 'views/pages/404.html'
       }).when('/pages/500', {
@@ -68,8 +68,8 @@
         templateUrl: 'views/tasks/tasks.html'
       }).when('/app/config', {
         templateUrl: 'includes/config'
-      }).when('/pages/changePassword', {
-        templateUrl: 'user/changePassword'
+      }).when('/app/account', {
+        templateUrl: 'includes/account'
       }).otherwise({
         redirectTo: '/404'
       });
@@ -77,5 +77,3 @@
   ]);
 
 }).call(this);
-
-//# sourceMappingURL=app.js.map
