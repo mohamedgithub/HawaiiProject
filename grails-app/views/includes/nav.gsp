@@ -7,6 +7,7 @@
             <a href="#/includes"><i class="fa fa-file-text-o"><span class="icon-bg bg-violet"></span></i><span data-i18n="configuration"></span></a>
             <ul>
                 <li><a href="#/app/config"><i class="fa fa-caret-right"></i><span data-i18n="configuration"></span></a></li>
+                <li><a href="#/app/account"><i class="fa fa-caret-right"></i><span data-i18n="account_creation"></span></a></li>
             </ul>
         </li>
     </ul>

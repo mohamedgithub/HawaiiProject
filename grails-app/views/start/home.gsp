@@ -18,7 +18,7 @@
         <div data-ng-controller="AppCtrl">
             <div data-ng-hide ="isSpecificPage()" data-ng-cloak>
                 <section data-ng-include=" 'includes/head' " id="header" class="top-header"> </section>
-                <aside data-ng-include=" 'includes/nav' " id="nav-container"></aside>
+               <aside data-ng-include=" 'includes/nav' " id="nav-container"></aside>
             </div>
         </div>
         <div class="view-container">
@@ -27,7 +27,6 @@
        
         <script type="text/javascript" src="${resource(dir: 'bower_components/jquery/dist/', file: 'jquery.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular/', file: 'angular.min.js')}" ></script>
-        <script type="text/javascript" src="${resource(dir: 'bower_components/angular/', file: 'angular.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular-route/', file: 'angular-route.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular-animate/', file: 'angular-animate.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/underscore/', file: 'underscore-min.js')}" ></script>
@@ -75,7 +74,10 @@
         <asset:javascript src="Form/FormValidation.js"/>
         <asset:javascript src="Table/TableCtrl.js"/>
         <asset:javascript src="Task/Task.js"/>
-        <asset:javascript src="Task/changePassword.js"/>
         <asset:javascript src="Task/Config.js"/>
+        <asset:javascript src="Task/createAccount.js"/>
+        <asset:javascript src="Task/lockscreen.js"/>
+        <asset:javascript src="Task/profile.js"/>
+<!--        <asset:image src="flags/american"/>-->
     </body>
 </html>
