@@ -2,7 +2,7 @@ angular.module('listExamples', [])
         .controller('ConfigCtrl', ['$scope', '$http', function($scope, $http) {
 
             var info = [];
-        
+    
             $scope.delete = function(index) {
                 var del  = confirm("U want to delete ?");
                 if(del) {

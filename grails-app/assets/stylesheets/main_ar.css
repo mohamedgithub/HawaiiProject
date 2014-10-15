@@ -12478,12 +12478,13 @@ button {
 }
 
 .customPanel {
-    width: 85%;
-    margin-left: -176px;
+    width: 77%;
+    margin-left: -130px;
+/*    margin-left: -176px;*/
 }
 
 .bootBtn {
-   right:800px;
+   right:721px;
 }
 
 .cancelbtn {
@@ -12493,4 +12494,18 @@ button {
 
 .headName {
     margin-left: -82px;
+}
+
+.form-panel {
+   width: 100%;
+}
+
+.butn-acc {
+    height: 42px;
+    margin-left: 46px;
+    width: 90%;
+}
+
+.customepanel {
+    width: 77%;
 }
