@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('app', ['ngRoute', 'ngAnimate','ui.bootstrap', 'easypiechart', 'mgo-angular-wizard', 'textAngular', 'app.ui.ctrls', 'app.ui.directives', 'app.ui.services', 'app.controllers', 'app.directives', 'app.form.validation', 'app.ui.form.ctrls', 'app.ui.form.directives', 'app.tables', 'app.task', 'app.localization', 'app.chart.ctrls', 'app.chart.directives','listExamples','app.account','app.lockscreen']).config([
+  angular.module('app', ['ngRoute', 'ngAnimate','ui.bootstrap', 'easypiechart', 'mgo-angular-wizard', 'textAngular', 'app.ui.ctrls', 'app.ui.directives', 'app.ui.services', 'app.controllers', 'app.directives', 'app.form.validation', 'app.ui.form.ctrls', 'app.ui.form.directives', 'app.tables', 'app.task', 'app.localization', 'app.chart.ctrls','app.chart.directives','listExamples','app.account','app.lockscreen', 'app.product']).config([
     '$routeProvider', function($routeProvider) {
       return $routeProvider.when('/', {
         redirectTo: '/dashboard'
@@ -70,6 +70,18 @@
         templateUrl: 'includes/config'
       }).when('/app/account', {
         templateUrl: 'includes/account'
+      }).when('/app/product', {
+        templateUrl: 'includes/productList'
+      }).when('/app/create', {
+        templateUrl: 'includes/createProduct'
+      }).when('/app/sale', {
+        templateUrl: 'includes/sale'
+      }).when('/app/buy', {
+        templateUrl: 'includes/buy'
+      }).when('/app/edit', {
+        templateUrl: 'includes/showEdit'
+      }).when('/app/changePassword', {
+        templateUrl: 'includes/changePassword'
       }).otherwise({
         redirectTo: '/404'
       });

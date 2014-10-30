@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group">
                             <div class="divider"></div>
-                            <button type="submit" class="btn btn-primary btn-block btn-lg"><span data-i18n="Create_an_account"></span></button>
+                            <button type="submit" class="btn btn-primary btn-block btn-lg butn-acc"><span data-i18n="Create_an_account"></span></button>
                         </div>
                     </form>
                 </section>

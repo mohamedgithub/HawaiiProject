@@ -1,13 +1,16 @@
-
 <%@ page contentType="text/html;charset=UTF-8" %>{{language}}
     <div id="nav-wrapper" data-ng-controller="NavCtrl">
     <ul id="nav" data-collapse-nav data-slim-scroll data-highlight-active>
         <li><a href="#/dashboard"><i class="fa fa-dashboard"><span class="icon-bg bg-danger"></span></i><span data-i18n="Dashboard"></span> </a></li>
-         <li>
+        <li>
             <a href="#/includes"><i class="fa fa-file-text-o"><span class="icon-bg bg-violet"></span></i><span data-i18n="configuration"></span></a>
             <ul>
+                <sec:ifAnyGranted roles="ROLE_ADMIN">
+                    <li><a href="#/app/account"><i class="fa fa-caret-right"></i><span data-i18n="account_creation"></span></a></li>
+                </sec:ifAnyGranted>
                 <li><a href="#/app/config"><i class="fa fa-caret-right"></i><span data-i18n="configuration"></span></a></li>
-                <li><a href="#/app/account"><i class="fa fa-caret-right"></i><span data-i18n="account_creation"></span></a></li>
+                <li><a href="#/app/product"><i class="fa fa-caret-right"></i>Product</a></li>
+                <li><a href="#/app/sale"><i class="fa fa-caret-right"></i>Product List</a></li>
             </ul>
         </li>
     </ul>

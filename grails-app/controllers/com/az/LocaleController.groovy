@@ -5,7 +5,7 @@ import org.springframework.web.servlet.support.RequestContextUtils
 import grails.converters.*
 import org.springframework.context.i18n.LocaleContextHolder as LCH 
  
-@Secured(['ROLE_ADMIN'])
+@Secured(['ROLE_ADMIN','ROLE_USER'])
 class LocaleController {
 
     def index() {

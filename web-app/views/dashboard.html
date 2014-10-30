@@ -55,8 +55,7 @@
             <section class="panel panel-default">
                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span data-i18n="Data"></span></strong></div>
                 <div class="panel-body" data-ng-controller="morrisChartCtrl">
-                    <div morris-chart data-data="comboData"data-type="bar"data-xkey="year" data-ykeys='["a", "b", "c"]' data-labels='["Value A", "Value B", "Value C"]' data-bar-colors='["#176799","#42A4BB","#78D6C7"]'
-                         style="height: 300px;"></div>
+                    <div morris-chart data-data="comboData"data-type="bar"data-xkey="year" data-ykeys='["a", "b", "c"]' data-labels='["Value A", "Value B", "Value C"]' data-bar-colors='["#176799","#42A4BB","#78D6C7"]'style="height: 300px;"></div>
                 </div>
             </section> 
         </div>
@@ -65,16 +64,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span data-i18n="Data"></span></strong></div>
                 <div class="panel-body"  data-ng-controller="flotChartCtrl">
-                    <div data-flot-chart
-                         data-data="donutChart2.data"
-                         data-options="donutChart2.options"
-                         style="width: 100%; height: 300px;"
-                         ></div>                    
+                    <div data-flot-chart data-data="donutChart2.data" data-options="donutChart2.options" style="width: 100%; height: 300px;"></div>                    
                 </div>
             </div>
-
-
-
         </div>
     </div>
 
@@ -83,10 +75,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span data-i18n="Realtime Data"></span></strong></div>
                 <div class="panel-body">
-                    <div data-flot-chart-realtime
-                         data-type="realtime"
-                         style="width: 100%; height: 275px;"
-                         ></div>                    
+                    <div data-flot-chart-realtime data-type="realtime" style="width: 100%; height: 275px;"></div>                    
                 </div>
             </div>        
         </div>
@@ -99,11 +88,7 @@
                 </div>
                 <div class="panel-icon bg-info">
                     <!-- <i class="wi-day-cloudy"></i> -->
-                    <canvas ui-weather
-                            icon="SNOW"
-                            color="#fff"
-                            width="70"
-                            height="70"></canvas>
+                    <canvas ui-weather icon="SNOW" color="#fff" width="70"height="70"></canvas>
                 </div>
                 <div class="panel-bottom bg-reverse">
                     <ul class="list-justified text-center">
@@ -112,19 +97,11 @@
                             <p class="text-muted">Wednesday</p>
                         </li>
                         <li>
-                            <canvas ui-weather
-                                    icon="WIND"
-                                    color="#6A55C2"
-                                    width="40"
-                                    height="40"></canvas>  
+                            <canvas ui-weather icon="WIND" color="#6A55C2" width="40" height="40"></canvas>  
                             <p class="text-muted">Thursday</p>
                         </li>
                         <li>
-                            <canvas ui-weather
-                                    icon="CLEAR_DAY"
-                                    color="#FFB61C"
-                                    width="40"
-                                    height="40"></canvas> 
+                            <canvas ui-weather icon="CLEAR_DAY" color="#FFB61C" width="40" height="40"></canvas> 
                             <p class="text-muted">Friday</p>
                         </li>                        
                     </ul>

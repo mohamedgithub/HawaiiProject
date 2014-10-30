@@ -68,6 +68,8 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.0.2"
         runtime ":resources:1.2.7"
+        compile ":mail:1.0.7"
+        compile ":weak-ssl:1.0" 
         
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"

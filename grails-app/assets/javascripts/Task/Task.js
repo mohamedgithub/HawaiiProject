@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('app.task', []).factory('taskStorage', function() {
+  angular.module('app.task', ['angularFileUpload']).factory('taskStorage', function() {
     var DEMO_TASKS, STORAGE_ID;
     STORAGE_ID = 'tasks';
     DEMO_TASKS = '[ {"title": "Finish homework", "completed": true}, {"title": "Make a call", "completed": true}, {"title": "Play games with friends", "completed": false}, {"title": "Shopping", "completed": false} ]';
@@ -126,8 +126,182 @@
         return $rootScope.$broadcast('taskRemaining:changed', newVal);
       });
     }
-  ]);
-
+  ]).controller('BuyCtrl', [
+    '$scope','$http','$location','$rootScope',function($scope, $http, $location, $rootScope) {
+        $scope.product = $rootScope.product;  
+    
+//    $scope.checkOrder = function() {
+//        $http.post("product/checkOrder", {
+//            productDetails:$scope.product
+//        }).success(function(data) {
+//                        
+//        });
+//        
+//        };         
+        }
+ 
+    
+]).controller('ListCtrl', [
+    '$scope','$http','$location','$rootScope',function($scope, $http, $location, $rootScope) {
+         $scope.products = [];
+         $scope.product = [];
+         $scope.Listproduct = [];
+        $http.get("product/list", {
+            }).success(function(data) {
+                $scope.products = data;
+            });
+            
+        $scope.deleteProduct = function(index) {
+            var deleteProduct = confirm("Do you want to delete ?");
+                if(deleteProduct) {
+                    $http.post("product/deleteProduct", {
+                        productDetails:$scope.products[index]
+                    }).success(function(data) {
+                    if(data === 'deleted') {
+                        $scope.products.splice(index, 1);
+                    }
+                }); 
+            }
+        };
+        
+        $scope.editProduct = function(index) {
+            $http.post("product/editProduct", {
+                productDetails:$scope.products[index]
+            }).success(function(data) {
+                $location.path('/app/edit');        
+                $rootScope.Listproduct = data;
+            });  
+        };
+        
+        $scope.buyProduct = function(index) {
+            $http.post("product/buyProduct", {
+                productDetails:$scope.products[index]
+            }).success(function(data) {
+                $location.path('/app/buy');
+                $rootScope.product = data;
+            });
+        };
+        
+        $http.get("product/getProduct", {
+        }).success(function(data) {
+           $scope.products = data;
+        }); 
+    }]).controller('EditController', ['$scope','$http','$location','$rootScope', '$upload','$timeout',function($scope, $http, $location, $rootScope, $upload,$timeout) {
+        $scope.products = {};
+        $scope.hide = true;
+        $scope.products = $rootScope.Listproduct;
+        $scope.update = function() {
+            var cost = $scope.products.costPrice;    
+            var sell = $scope.products.sellingPrice;
+            var patt = /^\d*(?:\.\d{0,2}){0,1}$/;
+            var validCost = patt.test(cost);
+            var validSell = patt.test(sell);
+            if (validCost ===  false) {
+                $scope.costFormatError = "Enter valid currrency format";
+                $scope.costError = '';
+                $scope.success = '';
+                $scope.sellFormatError ='';
+                $scope.productNameError = '';
+            } else if(validSell === false) {
+                $scope.sellFormatError = "Enter valid currrency format";
+                $scope.costError = '';
+                $scope.success = '';
+                $scope.costFormatError ='';
+                $scope.productNameError = '';
+            } else {
+                $http.post("product/update",{
+                    productId: $scope.products
+                }).success(function(data) {
+                    if(data === "Product already Exist") {
+                        $scope.productNameError = data;
+                        $scope.costError = '';
+                        $scope.success = '';
+                        $scope.costFormatError ='';
+                        $scope.sellFormatError ='';
+                    } else if(data === 'Selling price must be greater then cost price') {
+                        $scope.costError = data;
+                        $scope.productNameError = '';
+                        $scope.success = '';
+                        $scope.costFormatError ='';
+                        $scope.sellFormatError ='';
+                    } else {
+                        $scope.success = data;
+                        $scope.costError = '';
+                        $scope.productNameError = '';
+                        $scope.costFormatError ='';
+                        $scope.sellFormatError ='';
+                        $timeout(function() {
+                        $location.path('/app/product');
+                        }, 2000);
+                    }
+                });
+            }
+        };
+        
+        $scope.onFileSelect = function($files) {
+        var file = $files;
+        $scope.upload = function() {
+                $scope.upload = $upload.upload({
+                url: 'product/upload',
+                file: file,
+                fileFormDataName: "myFile",
+                data:$scope.products
+                }).success(function(data) {
+                });
+            };
+        };
+    }]).controller('AddProductController', ['$scope','$http','$location','$rootScope','$upload','$timeout',function($scope, $http, $location, $rootScope, $upload, $timeout) {
+            $scope.onFileSelect = function($files) {
+            var file = $files;
+                $scope.save = function() {
+                var cost = $scope.product.costPrice;    
+                var sell = $scope.product.sellingPrice;    
+                var validCost = cost.match(/^\d*(?:\.\d{0,2}){0,1}$/); 
+                var validSell = sell.match(/^\d*(?:\.\d{0,2}){0,1}$/);
+                if (!validCost) {
+                    $scope.costFormatError = "Enter valid currrency format";
+                    $scope.costError = '';
+                    $scope.success = '';
+                    $scope.sellFormatError ='';
+                    $scope.productNameError = '';
+                } else if(!validSell) {
+                    $scope.sellFormatError = "Enter valid currrency format";
+                    $scope.costError = '';
+                    $scope.success = '';
+                    $scope.costFormatError ='';
+                    $scope.productNameError = '';
+                } else {
+                    $scope.upload = $upload.upload({
+                    url: 'product/save',
+                    file: file,
+                    fileFormDataName: "myFile",
+                    data:$scope.product
+                    }).success(function(data) {
+                        if(data === "Product already Exist") {
+                            $scope.productNameError = data;
+                            $scope.costError = '';
+                            $scope.success = '';
+                            $scope.costFormatError ='';
+                            $scope.sellFormatError ='';
+                        } else if(data === 'Selling price must be greater then cost price') {
+                            $scope.costError = data;
+                            $scope.productNameError = '';
+                            $scope.success = '';
+                            $scope.costFormatError ='';
+                            $scope.sellFormatError ='';
+                        } else if(data === 'Your product added successfully') {
+                            $scope.success = data;
+                            $scope.costError = '';
+                            $scope.productNameError = '';
+                            $scope.costFormatError ='';
+                            $scope.sellFormatError ='';
+                            $timeout(function() {
+                                $location.path('/app/product');
+                            }, 2000);
+                        } 
+                    }); 
+                }
+            };
+        };
+    }]);
 }).call(this);
-
-//# sourceMappingURL=Task.js.map

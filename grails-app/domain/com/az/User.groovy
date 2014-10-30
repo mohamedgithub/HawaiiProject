@@ -13,15 +13,25 @@ class User {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
+        String token
+        String language
+        String filename
+        String fullPath
+        String file
         
         static transients = ['springSecurityService']
 
 	static constraints = {
-		username blank: false
+		username blank: false, unique: true
 		email blank: false, unique: true
 		location blank: false
 		phonenumber blank: false
 		password blank: false
+                token blank:true, nullable:true
+                language blank:true, nullable:true
+                filename blank:true, nullable:true
+                file blank:true, nullable:true
+                fullPath blank:true, nullable:true
 	}
 
 	static mapping = {

@@ -4,7 +4,7 @@
     <div class="panel-body"  data-ng-controller="ConfigCtrl">
         <form name="form_signup" class="form-horizontal form-validation" data-ng-submit="submitForms()">
             <div class="form-group">
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <label for=""><span data-i18n="user_name"></span></label>
                 </div>
                 <div class="col-sm-9">
@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <label for=""><span data-i18n="email"></span></label>
                 </div>
                 <div class="col-sm-9">
@@ -30,7 +30,7 @@
             </div>
             <hr>
         </form>
-        <div class="panel panel-primary" ng-show="userList.length >= 1">
+        <div class="panel panel-primary form-panel" ng-show="userList.length >= 1">
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-md-4"><span data-i18n="user_name"></span></div>

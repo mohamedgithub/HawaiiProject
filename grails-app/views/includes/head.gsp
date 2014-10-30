@@ -190,7 +190,7 @@
             </li> -->
             <li class="dropdown text-normal nav-profile">
                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="images/gg1.jpg" alt="" class="img-circle img30_30">
+                    <img src="images/{{file}}" alt="" class="img-circle img30_30">
                     <span class="hidden-xs headName">
                         <span>{{headName}}</span>
                     </span>
@@ -200,6 +200,12 @@
                         <a href="#/user/profile">
                             <i class="fa fa-user"></i>
                             <span data-i18n="my_profile"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/app/changePassword">
+                            <i class="fa fa-lock"></i>
+                            <span data-i18n="change_password"></span>
                         </a>
                     </li>
                     <li>

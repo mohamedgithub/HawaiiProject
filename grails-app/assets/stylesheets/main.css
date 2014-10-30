@@ -42,6 +42,10 @@ audio:not([controls]) {
   height: 0;
 }
 
+.my-btn-style {
+    margin-left: -10px;
+}
+
 /* line 74, bootstrap-sass/bootstrap/_normalize.scss */
 [hidden],
 template {
@@ -116,6 +120,10 @@ img {
   border: 0;
 }
 
+.container-top {
+    padding-top: 80px;
+}
+
 /* line 188, bootstrap-sass/bootstrap/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
@@ -136,6 +144,27 @@ hr {
 /* line 217, bootstrap-sass/bootstrap/_normalize.scss */
 pre {
   overflow: auto;
+}
+
+.myrow {
+    margin-left: 285px;
+}
+
+.my-update-left {
+    margin-left: -278px;
+}
+
+.my-row-top {
+    margin-top: 20px;
+}
+
+.my-row{
+    margin-left: 12px;
+    margin-right: 55px;
+}
+
+.buy-left {
+    margin-left: 100px;
 }
 
 /* line 228, bootstrap-sass/bootstrap/_normalize.scss */
@@ -997,7 +1026,7 @@ pre code {
 @media (min-width: 1200px) {
   /* line 10, bootstrap-sass/bootstrap/_grid.scss */
   .container {
-    width: 1170px;
+    width: 1122px;
   }
 }
 
@@ -6593,6 +6622,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   border-radius: 2px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin-top: 40px;
 }
 
 /* line 16, bootstrap-sass/bootstrap/_panels.scss */
@@ -12190,12 +12220,15 @@ button.toast-close-button {
 @media (min-width: 768px) {
   /* line 6, sections/_content.scss */
   #content {
-    top: 50px;
     width: auto;
-    left: 220px;
+    left: 225px;
+    top: 50px;
   }
 }
 
+.product-right{
+    margin-top: 20px;
+}
 /* line 29, sections/_content.scss */
 .body-special #content {
   z-index: 2;
@@ -12219,4 +12252,9 @@ button.toast-close-button {
 /* line 9, sections/_form.scss */
 .form-validation .ng-invalid.ng-dirty {
   border-color: #e94b3b;
+}
+
+.signUpPanel {
+    margin-left: 150px;
+    width: 75%;
 }

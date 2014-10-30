@@ -138,7 +138,20 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/js/**':                      ['permitAll'],
 	'/**/css/**':                     ['permitAll'],
 	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
+	'/**/favicon.ico':                ['permitAll'],
+	'/test/forgotPassword':           ['permitAll'],
+	'/test/savePassword':             ['permitAll'],
+	'/test/resetPassword':            ['permitAll'],
+	'/test/signUpUser':               ['permitAll'],
+	'/test/createUser':               ['permitAll'],
+	'/test/checkName':                ['permitAll'],
+	'/test.gsp':                      ['permitAll'],
+	'/resetPassword.gsp':             ['permitAll'],
+	'/resetPasswordSuccess.gsp':      ['permitAll'],
+	'/signup.gsp':                    ['permitAll'],
+	
+	'/test/resetPassword.gsp':        ['permitAll']
+        
 ]
 
 //grails.plugin.databasemigration.updateOnStart = true
@@ -146,3 +159,28 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 //grails.plugin.databasemigration.changelogLocation = 'grails-app/migrations'
 
 grails.plugin.springsecurity.logout.postOnly = false
+
+grails {
+   mail {
+     host = "smtp.gmail.com"
+     port = 465
+     username = "assistanz.test@gmail.com"
+     password = "l3tm3intest"
+     props = ["mail.smtp.auth":"true",
+              "mail.smtp.socketFactory.port":"465",
+              "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+              "mail.smtp.socketFactory.fallback":"false"]
+   }
+}
+
+environments {
+    development {
+        uploadFolder = "web-app/images/"
+    }
+    test {
+        uploadFolder = "web-app/images/"
+    }
+    production {
+        uploadFolder = "web-app/images/"
+    }
+}

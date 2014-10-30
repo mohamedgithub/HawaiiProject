@@ -17,17 +17,18 @@
     <body id="app" data-ng-app="app" data-custom-background data-off-canvas-nav="">
         <div data-ng-controller="AppCtrl">
             <div data-ng-hide ="isSpecificPage()" data-ng-cloak>
-                <section data-ng-include=" 'includes/head' " id="header" class="top-header"> </section>
+                <section data-ng-include=" 'includes/head' " id="header" class="top-header"></section>
                <aside data-ng-include=" 'includes/nav' " id="nav-container"></aside>
             </div>
         </div>
         <div class="view-container">
             <section data-ng-view id="content" class="animate-fade-up"></section>
         </div>
-       
+        
         <script type="text/javascript" src="${resource(dir: 'bower_components/jquery/dist/', file: 'jquery.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular/', file: 'angular.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular-route/', file: 'angular-route.min.js')}" ></script>
+        <script type="text/javascript" src="${resource(dir: 'bower_components/angular-route/', file: 'angular-route.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular-animate/', file: 'angular-animate.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/underscore/', file: 'underscore-min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular-bootstrap/', file: 'ui-bootstrap-tpls.min.js')}" ></script>
@@ -44,6 +45,10 @@
         <script type="text/javascript" src="${resource(dir: 'bower_components/raphael/', file: 'raphael-min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/morris.js/', file: 'morris.js')}" ></script>
         
+        <script type="text/javascript" src="${resource(dir: 'bower_components/angular-fileupload/', file: 'angular-file-upload-html5-shim.min.js')}" ></script>
+        <script type="text/javascript" src="${resource(dir: 'bower_components/angular-fileupload/', file: 'angular-file-upload-shim.min.js')}" ></script>
+        <script type="text/javascript" src="${resource(dir: 'bower_components/angular-fileupload/', file: 'angular-file-upload.min.js')}" ></script>
+        
         <script type="text/javascript" src="${resource(dir: 'bower_components/flot/', file: 'jquery.flot.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/flot/', file: 'jquery.flot.resize.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/flot/', file: 'jquery.flot.pie.js')}" ></script>
@@ -55,6 +60,9 @@
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular-wizard/dist/', file: 'angular-wizard.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/textAngular/dist/', file: 'textAngular-sanitize.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/textAngular/dist/', file: 'textAngular.min.js')}" ></script>
+        
+        
+        
 
         <g:javascript src="vendors/skycons.js" />		
         <g:javascript src="vendors/jquery.sparkline.min.js" />		
@@ -78,6 +86,9 @@
         <asset:javascript src="Task/createAccount.js"/>
         <asset:javascript src="Task/lockscreen.js"/>
         <asset:javascript src="Task/profile.js"/>
-<!--        <asset:image src="flags/american"/>-->
+        <asset:javascript src="Task/Product.js"/>
+        
+<!--        <asset:javascript src="Task/SignUp.js"/>-->
+
     </body>
 </html>
