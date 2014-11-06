@@ -37,14 +37,21 @@ class IncludesController {
     def account() {
         render(view:'createAccount')
     }
+    
     def sale() {
         render(view:'sale')
     }
+    
     def buy() {
         render(view:'buy')
     }
+    
     def changePassword() {
         render(view:'changePassword')
+    }
+    
+    def report() {
+        render(view:'report')
     }
     
     def saveItem() {

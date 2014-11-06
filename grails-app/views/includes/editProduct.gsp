@@ -1,33 +1,20 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
- <!DOCTYPE html>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Edit Product</title>   
-<script type='text/javascript'>
-    $(document).ready(
-    function(){
-        $('#imgButton').attr('disabled',true);
-        $('input:file').change(
-            function(){
-                if ($("#myFile").val() ){
-                    $('#imgButton').removeAttr('disabled'); 
-                }
-                else {
-                    $('#imgButton').attr('disabled',true);
-                }
-        });
-    });
-</script> 
+        <title>Edit Product</title>
+        <asset:javascript src="Task/ImageUpload.js"/>
     </head>
     <body>
-                <div class="container container-top" ng-controller="EditController">
+          <h1 class="row-list"> Edit Product</h1>      
+        
+        <div class="container" ng-cloak ng-controller="EditController">
                     <div ng-hide="hide">{{products.id}}
                     </div>
+                    <div class="custom-row">  
+                        <div class="alert alert-success" data-ng-show="success" role="alert">{{success}}</div>
+                    </div>
                     <form name="myUpload" class="form-horizontal status" ng-submit="update()" method="POST" autocomplete='off'>
-                        <div class="row">  
-                            <div class="alert alert-success" data-ng-show="success" role="alert">{{success}}</div>
-                        </div>
                         <div ng-hide="id"><input type="hidden" name="productId" ng-model="products.id" class="form-control" required=""/></div>
                         <div class="form-group">
                             <label  class="col-sm-3 control-label">Product Name:</label>
@@ -93,7 +80,6 @@
                             
                     </form>
                 </div>
-            </div>
-        </div>
+            
     </body>
 </html>

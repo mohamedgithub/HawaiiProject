@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+
 <html>
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -16,7 +16,7 @@
                             <div class="caption">
                                 <h5><center> Product Name:&nbsp;{{product.productName}}</center></h5>
                                 <h5><center> Price:&nbsp;{{product.sellingPrice}}&nbsp;INR </center></h5>
-                                <button class="btn btn-primary" ng-click="buyProduct($index)">Buy Product</button>
+                                <button class="btn btn-primary btn-right" ng-click="buyProduct($index)">Buy Product</button>
                             </div>
                         </div>
                     </div>

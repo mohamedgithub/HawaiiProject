@@ -82,6 +82,8 @@
         templateUrl: 'includes/showEdit'
       }).when('/app/changePassword', {
         templateUrl: 'includes/changePassword'
+      }).when('/app/report', {
+        templateUrl: 'includes/report'
       }).otherwise({
         redirectTo: '/404'
       });

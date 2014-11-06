@@ -1,7 +1,7 @@
-<div class="page page-dashboard" data-ng-controller="DashboardCtrl">
+<div class="page page-dashboard" ng-cloak>
 
     <!-- stats -->
-    <div class="row">
+    <div class="row" data-ng-controller="DashboardCtrl">
         <div class="col-lg-3 col-xsm-6">
             <div class="panel mini-box">
                 <span class="box-icon bg-success">
@@ -30,7 +30,7 @@
                     <i class="fa fa-dollar"></i>
                 </span>
                 <div class="box-info">
-                    <p class="size-h2">4,550</p>
+                    <p class="size-h3">{{profit| slug:lang}}</p>
                     <p class="text-muted"><span data-i18n="Profit"></span></p>
                 </div>
             </div>
@@ -46,7 +46,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <!-- end stats -->
 

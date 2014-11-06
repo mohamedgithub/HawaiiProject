@@ -38,6 +38,8 @@ grails.mime.types = [ // the first one is the default format
 grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*', '/bower_components/*', '/views/*']
 grails.resources.adhoc.includes = ['/images/**', '/css/**', '/js/**', '/plugins/**', '/bower_components/**', '/views/**']
 
+grails.resources.resourceLocatorEnabled = true
+
 // Legacy setting for codec used to encode data with ${}
 grails.views.default.codec = "html"
 
@@ -60,6 +62,11 @@ grails {
                 staticparts = 'none' // escapes output from static template parts
             }
         }
+        
+    grails.plugin.databasemigration.updateOnStart = true
+    grails.plugin.databasemigration.updateOnStartFileNames = ["changelog.groovy"]
+
+        
         // escapes all not-encoded output at final stage of outputting
         // filteringCodecForContentType.'text/html' = 'html'
     }

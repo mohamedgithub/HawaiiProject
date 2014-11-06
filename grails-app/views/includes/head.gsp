@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+
 
 <header class="clearfix" data-ng-controller="LangCtrl">
     <div data-ng-if="language == '_ar'">

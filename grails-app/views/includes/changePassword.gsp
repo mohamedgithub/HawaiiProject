@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+
 
 <html>
     <head>
@@ -7,7 +7,7 @@
         
     </head>
     <body>
-        <div class="container container-top" data-ng-controller="ChangePasswordController">
+        <div class="container container-top" ng-cloak data-ng-controller="ChangePasswordController">
             <form name="myUpload" role="form" class="form-horizontal status" data-ng-submit="changePassword()" method="POST" autocomplete='off'>
                 <div class="col-md-offset-1 col-md-10 col-md-1">
                     <h3 class="bg-success"><span data-ng-show="passwordFieldErrors.success" data-i18n="{{passwordFieldErrors.success}}"></span></h3>

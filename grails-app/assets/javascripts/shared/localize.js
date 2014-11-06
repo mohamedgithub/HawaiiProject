@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-        angular.module('app.localization', []).factory('localize', [
+        angular.module('app.localization', ['app.controllers']).factory('localize', [
             '$http', '$rootScope', '$window', function($http, $rootScope, $window) {
                 var localize;
                     localize = {
@@ -14,6 +14,7 @@
                     },
                     
                     setLanguage: function(value) {
+                        $rootScope.lang = value;
                         localize.language = value.toLowerCase().split("-")[0];
                         return localize.initLocalizedResources();
                     },
@@ -220,7 +221,7 @@
                             $scope.nameError='';
                         }
                     });
-                } 
+                    } 
                     $scope.phoneNumberError = "Enter Valid Number";
                     $scope.showSaving = false;
                     $scope.emailError = "";

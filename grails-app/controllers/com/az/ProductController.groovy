@@ -107,10 +107,40 @@ class ProductController {
         render product as JSON
     }
     
-//    def checkOrder() {
-//        def requestData = request.JSON
-//        def product = Product.findById(requestData.productDetails.id)
-//        if(product.quantity)
-//        
-//    }
+    def checkOrder() {
+        
+        def requestData = request.JSON
+        def requestUserData = request.JSON
+        def product = Product.findById(requestData.productDetails.id)
+        if(requestUserData.user <= product.quantity) {
+            def currentQuantity = product.quantity
+            product.quantity = (currentQuantity - requestUserData.user)
+            product.save(flush:true)
+            def report = new Report()
+            report.productName = product.productName
+            report.sellingPrice = product.sellingPrice
+            report.quantity =  requestUserData.user
+            report.profit =  ((product.sellingPrice - product.costPrice) * requestUserData.user)
+            report.total = (product.sellingPrice * requestUserData.user)
+            def date = new Date()
+            report.date = date
+            report.save(flush:true)
+            render "Your purchase has been done successfully"
+        } else {
+            render("Only" + product.quantity + " Products available")
+        }
+    }
+    
+    def getReport() {
+        def report = Report.findAll()
+        render report as JSON
+    }
+    def getProfit() {
+        def report = Report.findAll()
+        def totalProfit = 0;
+        for (def profit : report.profit) { 
+            totalProfit = totalProfit + profit;
+        }
+        render totalProfit
+    }
 }

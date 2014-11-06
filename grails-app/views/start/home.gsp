@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="${resource(dir: 'bower_components/weather-icons/css/', file: 'weather-icons.min.css')}" />
 
         <!--<asset:stylesheet src="main.css"/>-->
-        <link rel="stylesheet" href="${resource(dir: 'bower_components/morris.js/', file: 'morris.css')}" type="text/css">
+        <link rel="stylesheet" href="${resource(dir: 'bower_components/morris', file: 'morris.css')}" type="text/css">
     </head>
     <body id="app" data-ng-app="app" data-custom-background data-off-canvas-nav="">
         <div data-ng-controller="AppCtrl">
@@ -40,10 +40,10 @@
         <script type="text/javascript" src="${resource(dir: 'bower_components/jquery-steps/build/', file: 'jquery.steps.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/toastr/', file: 'toastr.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/bootstrap-file-input/', file: 'bootstrap.file-input.js')}" ></script>
-        <script type="text/javascript" src="${resource(dir: 'bower_components/jquery.slimscroll/', file: 'jquery.slimscroll.min.js')}" ></script>
+        <script type="text/javascript" src="${resource(dir: 'bower_components/jquerySlimscroll/', file: 'jquery.slimscroll.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/holderjs/', file: 'holder.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/raphael/', file: 'raphael-min.js')}" ></script>
-        <script type="text/javascript" src="${resource(dir: 'bower_components/morris.js/', file: 'morris.js')}" ></script>
+        <script type="text/javascript" src="${resource(dir: 'bower_components/morris/', file: 'morris.js')}" ></script>
         
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular-fileupload/', file: 'angular-file-upload-html5-shim.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular-fileupload/', file: 'angular-file-upload-shim.min.js')}" ></script>
@@ -87,6 +87,7 @@
         <asset:javascript src="Task/lockscreen.js"/>
         <asset:javascript src="Task/profile.js"/>
         <asset:javascript src="Task/Product.js"/>
+        <asset:javascript src="Task/ImageUpload.js"/>
         
 <!--        <asset:javascript src="Task/SignUp.js"/>-->
 

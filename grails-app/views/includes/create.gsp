@@ -1,15 +1,13 @@
 <html>
     <head>
         <title>Product Creation</title>
-        <script type="text/javascript" src="${resource(dir: 'bower_components/angular-route/', file: 'angular-route.js')}" ></script>
-         
-        <script type="text/javascript" src="${resource(dir: 'bower_components/angular/', file: 'angular.min.js')}" ></script>
     </head>
     <body>
-        <div class="container container-top" ng-controller="AddProductController">
-                
+        <div class="container" ng-cloak ng-controller="AddProductController">
+            <h1 class="row-list"> Create Product</h1>
+                    
                         <form name="myUpload" class="form-horizontal status" ng-submit="save()" method="POST" autocomplete='off'>
-                            <div class="row">  
+                            <div class="custom-row">  
                                 <div class="alert alert-success" data-ng-show="success" role="alert">{{success}}</div>
                             </div>
                             <div class="form-group">
@@ -56,8 +54,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-6 col-md-offset-6">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                <div class="col-md-offset-5 col-sm-7">
+                                    <button type="submit" class="button-left btn btn-primary">Submit</button>
                                 </div>
                             </div>
                          </form>
