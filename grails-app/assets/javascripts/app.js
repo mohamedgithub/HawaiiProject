@@ -4,7 +4,19 @@
     '$routeProvider', function($routeProvider) {
       return $routeProvider.when('/', {
         redirectTo: '/dashboard'
-      }).when('/dashboard', {
+      }).when('/app/createCustomer', {
+        templateUrl: 'customer/createCustomer'
+      }).when('/app/listCustomer', {
+        templateUrl: 'customer/Customerlist'
+      }).when('/app/editCustomer', {
+        templateUrl: 'customer/customerEdit'
+      }).when('/app/showCustomer', {
+        templateUrl: 'customer/customerShow'
+      }).when('/app/payment', {
+        templateUrl: 'customer/payment'
+      })
+              
+                .when('/dashboard', {
         templateUrl: 'includes/dashboard'
       }).when('/ui/typography', {
         templateUrl: 'views/ui/typography.html'
@@ -84,7 +96,24 @@
         templateUrl: 'includes/changePassword'
       }).when('/app/report', {
         templateUrl: 'includes/report'
-      }).otherwise({
+      }).when('/app/room_booking', {
+        templateUrl: 'includes/roomBooking'
+      }).when('/app/createSeason', {
+        templateUrl: 'includes/createSeason'
+      }).when('/app/editSeason', {
+        templateUrl: 'includes/editSeason'
+      }).when('/app/roomList', {
+        templateUrl: 'includes/roomList'
+      }).when('/app/editRoom', {
+        templateUrl: 'includes/editRoom'
+      }).when('/app/createHotel', {
+        templateUrl: 'includes/createHotel'
+      }).when('/app/createRoomPrice', {
+        templateUrl: 'includes/createRoomPrice'
+      }).when('/app/createFoodPrice', {
+        templateUrl: 'includes/createFoodPrice'
+      })
+              .otherwise({
         redirectTo: '/404'
       });
     }

@@ -1,7 +1,8 @@
 dataSource {
-    pooled = true
+     pooled = true
     jmxExport = true
-    driverClassName = "org.h2.Driver"
+    driverClassName = "com.mysql.jdbc.Driver"
+    dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
     username = "sa"
     password = ""
 }
@@ -17,11 +18,10 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = ""
-            driverClassName = "com.mysql.jdbc.Driver"
-            url = "jdbc:mysql://localhost/Hawaii"
+            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
+            url = "jdbc:mysql://localhost:3306/test"
             username = "root"
-            password = "l3tm3in"
+            password = "1234"
         }
     }
     test {
@@ -57,3 +57,4 @@ environments {
         }
     }
 }
+

@@ -1,23 +1,35 @@
 <%@ page contentType="text/html;charset=UTF-8" %>{{language}}
     <div id="nav-wrapper" data-ng-controller="NavCtrl">
     <ul id="nav" data-collapse-nav data-slim-scroll data-highlight-active>
-        <li><a href="#/dashboard"><i class="fa fa-dashboard"><span class="icon-bg bg-danger"></span></i><span data-i18n="Dashboard"></span> </a></li>
+        <li><a href="#/dashboard"><i class="fa fa-dashboard"><span class="icon-bg bg-danger"></span></i>Dashboard</a></li>
         <li>
-            <a href="#/includes"><i class="fa fa-file-text-o"><span class="icon-bg bg-violet"></span></i><span data-i18n="configuration"></span></a>
+            <a href="#/includes"><i class="fa fa-file-text-o"><span class="icon-bg bg-violet"></span></i>Customer</a>
             <ul>
-                <li><a href="#/app/account"><i class="fa fa-caret-right"></i><span data-i18n="account_creation"></span></a></li>
-                <sec:ifAnyGranted roles="ROLE_ADMIN">
-                <li><a href="#/app/config"><i class="fa fa-caret-right"></i><span data-i18n="configuration"></span></a></li>
-                <li><a href="#/app/product"><i class="fa fa-caret-right"></i><span data-i18n="products"></span></a></li>
+                <li><a href="#/app/createCustomer"><i class="fa fa-caret-right"></i>Create Customer</a></li>
+                <li><a href="#/app/listCustomer"><i class="fa fa-caret-right"></i>List Customer</a></li>
+                <li><a href="#/app/payment"><i class="fa fa-caret-right"></i>Payment</a></li>
                 <li><a href="#/app/sale"><i class="fa fa-caret-right"></i><span data-i18n="product_list"></span></a></li>
                 <li><a href="#/app/report"><i class="fa fa-caret-right"></i><span data-i18n="report"></span></a></li>
-                </sec:ifAnyGranted>
+//                <!--<sec:ifAnyGranted roles="ROLE_ADMIN">    </sec:ifAnyGranted>-->
             </ul>
         </li>
-    </ul>
-</div>
-
-<!--        <li>
+        <li>
+            <a href="#/ui"><i class="fa fa-magic"><span class="icon-bg bg-success"></span></i>Room Booking</a>
+            <ul>
+                <li><a href="#/app/createSeason"><i class="fa fa-caret-right"></i>Create Season</a></li>
+                <li><a href="#/app/room_booking"><i class="fa fa-caret-right"></i>Room Booking</a></li>
+                <li><a href="#/app/roomList"><i class="fa fa-caret-right"></i>Room List</a></li>
+            </ul>  
+        </li>    
+        <li>
+            <a href="#/ui"><i class="fa fa-star"><span class="icon-bg bg-primary-light"></span></i>Hotel Booking</a>
+            <ul>
+                <li><a href="#/app/createHotel"><i class="fa fa-caret-right"></i>Create Hotel</a></li>
+                <li><a href="#/app/createRoomPrice"><i class="fa fa-caret-right"></i>Create Room Price</a></li>
+                <li><a href="#/app/createFoodPrice"><i class="fa fa-caret-right"></i>Create Food Price</a></li>
+            </ul>  
+        </li>  
+        <li>
             <a href="#/ui"><i class="fa fa-magic"><span class="icon-bg bg-orange"></span></i><span data-i18n="ui_kit"></span></a>
             <ul>
                 <li><a href="#/ui/buttons"><i class="fa fa-caret-right"></i><span data-i18n="buttons"></span></a></li>
@@ -80,6 +92,8 @@
                 <li><a href="#/pages/blank"><i class="fa fa-caret-right"></i><span data-i18n="blank_page"></span></a></li>
                  <li><a href="#/pages/invoice"><i class="fa fa-caret-right"></i><span data-i18n="Invoice"></span></a></li> 
             </ul>
-        </li>-->
+        </li>
+         </ul>
+    </div>    
 
 

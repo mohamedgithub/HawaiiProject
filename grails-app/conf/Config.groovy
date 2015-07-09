@@ -63,8 +63,8 @@ grails {
             }
         }
         
-    grails.plugin.databasemigration.updateOnStart = true
-    grails.plugin.databasemigration.updateOnStartFileNames = ["changelog.groovy"]
+//    grails.plugin.databasemigration.updateOnStart = true
+//    grails.plugin.databasemigration.updateOnStartFileNames = ["changelog.groovy"]
 
         
         // escapes all not-encoded output at final stage of outputting

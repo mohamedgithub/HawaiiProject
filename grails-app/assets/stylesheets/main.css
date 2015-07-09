@@ -152,6 +152,10 @@ img {
     margin-left: 100px;
 }
 
+.custom-left {
+    left: 70px;
+}
+
 .custom-content{
     left: 215px;
     top: 15px;
@@ -12290,4 +12294,308 @@ button.toast-close-button {
 .signUpPanel {
     margin-left: 150px;
     width: 75%;
+}
+
+
+/* styles */ 
+
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
+.panhead{
+    background:#1959BA !important;
+}
+.panhead:hover{
+    background:#000000 !important;
+
+}
+.panel-effect{
+    color:white;font-size: 28px; text-decoration: none;
+}
+.panel-effect:hover{
+    color:white;font-size: 28px; text-decoration: none;
+}
+.panel-bodyalign{
+    padding-top: 50px;
+}
+.cntryform{
+    margin-left: 20px;
+}
+.gridtable{
+    width: 100%; 
+    padding-top: 30px;
+}
+.gridtablebranch{
+    width: 100%; 
+    padding-top: 50px;
+}
+.contacttable{
+    width: 100%; 
+    padding-top: 0px;
+}
+.addlist{
+    width: 100%; 
+
+}
+.tablehead{
+    background: #00B2B2; color: white;
+}
+.contacttablehead{
+    background: #000; color: white;
+}
+.contacttext{
+    text-align:center;
+}
+.pencil{
+    color:orange;
+}
+.trash{
+    color:red;
+}
+.container-page{
+    margin-top: 0px;
+}
+.branchform {
+    width:95%;
+}
+.branchformalign{
+    
+}
+.addresslen{
+    width:100%;
+}
+.contactadd{
+    padding-left: 15px;
+    font-size: 18px;
+    color:black;
+    margin-top:0px; 
+}
+.companyloc{
+    padding-left: 15px;
+    font-size: 18px;
+    color:black;
+    margin-top:-20px; 
+}
+.hrcolor{
+    color:black;
+}
+.addcontact{
+    text-align: center;
+}
+.addbtn{
+    margin-top: 10px;
+    margin-left: 0px;
+}
+.branchsavebtn{
+    margin-left:500px;
+}
+.branchsavebtn{
+    margin-left:500px;
+    margin-top: 20px;
+    margin-bootom: 30px;
+}
+
+
+.hotel-submit{
+    margin-left: 255px;
+}
+
+@media (min-width:320px) and (max-width:480px) and (orientation: portrait){
+    .savebtn{
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    .cntry{
+        margin-left: 0px;    
+    }
+    .citysavebtn{
+        margin-left: 50px;
+    }
+    .branchhead{
+        font-size: 18px;
+    }
+    .branchsavebtn{
+    margin-left:130px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+}
+
+@media (min-width:480px)  and (orientation: landscape){
+    .savebtn{
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    .cntry{
+        margin-left: 0px;    
+    }
+    .citysavebtn{
+        margin-left: 75px;
+    }
+    .branchsavebtn{
+    margin-left:220px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+}
+
+@media (min-width:600px) and (max-width:768px) and (orientation: portrait){
+    .savebtn{
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    .cntry{
+        margin-left: 0px;    
+    }
+    .citysavebtn{
+        margin-left: 100px;
+    }
+    .branchsavebtn{
+    margin-left:270px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+}
+
+@media (min-width:768px)  and (orientation: landscape){
+    .savebtn{
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+    .cntry{
+        margin-left: 10px;    
+    }
+    .citysavebtn{
+        margin-left: 0px;
+    }
+    .branchform {
+        width:95%;
+    }
+    .removebtn{
+        margin-top:10px;
+    }
+    .branchsavebtn{
+    margin-left:270px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.contactadd{
+    width: 100%; 
+    padding-top: 0px;
+}
+.gridtable{
+    width: 100%; 
+    padding-top: 30px;
+}
+
+}
+
+@media (min-width:768px) and (max-width:1024px) and (orientation: portrait){
+    .savebtn{
+        margin-top: 0px;
+        margin-left:10px;
+    }
+    .cntry{
+        margin-left: 10px;    
+    }
+    .branchform {
+        width:100%;
+    }
+    .removebtn{
+        margin-top:10px;
+    }
+    .addbutton{
+        width:117%
+    }
+    .branchsavebtn{
+    margin-left:250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+}
+
+@media (min-width:1024px)  and (orientation: landscape){
+    .savebtn{
+        margin-top: 0px;
+        margin-left: 15px;
+    }
+    .cntry{
+        margin-left:15px;    
+    }
+    .branchform {
+        width:95%;
+    }
+    .rembtn{
+        width:92%;
+        height:auto;
+        position:relative;
+        margin-top:12px;
+        font-size:11px;
+    }
+    .removebtn{
+        margin-top:10px;
+    }
+    .addbutton{
+        width:100%
+    }
+    .branchsavebtn{
+    margin-left:400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+}
+
+@media (min-width:1200px) {
+    .savebtn{
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+    .cntry{
+        margin-left: 20px;    
+    }
+    .branchsavebtn{
+    margin-left:500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+}
+
+.pen:hover {
+    cursor: pointer;
+    font-size: 18px;
 }

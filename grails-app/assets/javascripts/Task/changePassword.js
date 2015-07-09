@@ -4,7 +4,6 @@ angular.module('ChangePassword', [])
             $scope.passwordErrors = {};
             $scope.passwordFieldErrors = {};
             $scope.changePassword = function() {
-                alert("changePassword")
                 $http.post("user/checkPassword",
                 {   
                     change: $scope.password   

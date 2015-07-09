@@ -92,5 +92,37 @@ class IncludesController {
     def showEdit() {
         render(view:'editProduct')
     }
+    
+    def roomBooking() {
+        render(view:'roomBooking')
+    }
+    
+    def roomList() {
+        render(view:'roomList')
+    }
+    
+    def editRoom() {
+        render(view:'editRoom')
+    }
+    
+    def createSeason() {
+        render(view:'createSeason')
+    }
+    
+    def editSeason() {
+        render(view:'editSeason')
+    }
+    
+    def createHotel() {
+        render(view:'createHotel')
+    }
+    
+    def createRoomPrice() {
+        render(view:'createRoomPrice')
+    }
+    
+    def createFoodPrice() {
+        render(view:'createFoodPrice')
+    }
 }
 

@@ -60,10 +60,10 @@
         <script type="text/javascript" src="${resource(dir: 'bower_components/angular-wizard/dist/', file: 'angular-wizard.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/textAngular/dist/', file: 'textAngular-sanitize.min.js')}" ></script>
         <script type="text/javascript" src="${resource(dir: 'bower_components/textAngular/dist/', file: 'textAngular.min.js')}" ></script>
+    
         
         
         
-
         <g:javascript src="vendors/skycons.js" />		
         <g:javascript src="vendors/jquery.sparkline.min.js" />		
         <g:javascript src="vendors/responsive-tables.js" />		

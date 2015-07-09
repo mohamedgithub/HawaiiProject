@@ -159,7 +159,8 @@ class UserController {
         render user as JSON
     }
     def checkPassword() {
-        Console.print("checkPassword")
+        
+        
         HashMap fieldErrors = new HashMap()
         HashMap item = new HashMap()
         HashMap passwordError = new HashMap()
